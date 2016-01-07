@@ -1,0 +1,1 @@
+define([],function(){function e(){var e=new b2BodyDef;e.type=b2Body.b2_staticBody;var t=new b2FixtureDef;t.density=0,t.friction=.9,t.restitution=.2,t.shape=new b2PolygonShape,t.shape.SetAsBox(25/30,.5/30),e.position.Set(7.5,340/30);var n=world.CreateBody(e);return n.extType="slingshot",n.CreateFixture(t),n.SetUserData(1),window.SS=n,n}return e});

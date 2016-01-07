@@ -1,0 +1,98 @@
+﻿body {
+            margin:0px;
+            padding:0px;
+}
+
+.loadingBg {
+    width:1210px;
+    height:450px;
+    z-index:9;
+    position:absolute;
+    overflow:hidden;
+   
+}
+.loadingBg .inner {
+     width:1210px;
+     height:450px;
+    position:relative;
+     margin-left:0px
+}
+
+.loadingBg .inner #startBtn {
+position: absolute;
+right: -190px;
+bottom: 24px;
+cursor: pointer;
+}
+
+.canvas {
+    position:absolute
+}
+#content {
+            width:1210px;
+            height:450px;
+            position:relative;
+            margin:0px;
+            padding:0px;
+}
+ .container {
+            width:1210px;
+            height:450px;
+            position:relative;
+            margin:0px;
+            padding:0px;
+ }
+
+.bubble {
+    position:absolute;
+
+}
+    .bubble img {
+        margin-top:50px;
+        opacity:0;
+    }
+.g_mooncake {
+top: 131px;
+left: 315px;
+}
+
+.y_mooncake {
+top: 185px;
+left: 587px;
+}
+
+.g_joy {
+top: 183px;
+left: 1192px;
+}
+.moon {
+   position: fixed;
+    top: -59px;
+    left: 892px;
+}
+
+
+#share_a {
+    position:absolute;
+    z-index: 6666;
+}
+    #share_a a {
+        display:block;
+        width:36px;
+        height:36px;
+        float:left;
+        margin-left:20px
+    }
+
+    #share_a .sina {
+        background-image:url("../img/s_sina.png");
+    }
+        #share_a .douban {
+        background-image:url("../img/s_douban.png");
+    }
+            #share_a .tx {
+        background-image:url("../img/s_tx.png");
+    }
+                #share_a .renren {
+        background-image:url("../img/s_renren.png");
+    }

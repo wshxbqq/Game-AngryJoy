@@ -1,0 +1,1 @@
+define(["./base/SpriteBase"],function(e){var t=function(n){e.call(this,n,n.textures.background,0,0,!1),t.prototype.create=function(){Kiwi.GameObjects.Sprite.prototype.create.call(this)}};return Kiwi.extend(t,e),t});

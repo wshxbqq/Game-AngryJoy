@@ -1,0 +1,32 @@
+﻿.game_entry_btn {
+    position: fixed;
+    left: 50%;
+    bottom: 0px;
+    width: 120px;
+    height: 120px;
+    margin-left: 505px;
+    background-color: red;
+    z-index: 9;
+}
+#outerContaner {
+    width: 1210px;
+    height: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -225px 0px 0px -605px;
+    padding: 0px;
+    z-index: 99999;
+    background-color: rgb(0, 0, 0);
+}
+#outerContaner .close {
+    width: 16px;
+    height: 16px;
+    background: url('http://gautumn.jd.com/img/close_btn.png');
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

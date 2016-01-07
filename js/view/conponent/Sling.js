@@ -1,0 +1,1 @@
+define(["./base/SpriteBase"],function(e){var t=function(t){e.call(this,t,t.textures.arrow,0,0,!1)};return Kiwi.extend(t,e),t});

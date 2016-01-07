@@ -1,0 +1,111 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/lib/jquery.cookie.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/b2.js"></script>
+    <script src="js/lib/kiwi.js"></script>
+    <script src="js/lib/particlesgl-1.0.3.js"></script>
+    <script src="js/dc.js"></script>
+    <script src="js/lib/share.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script>
+        window.s_canvas = false;
+        window.s_gl = false;
+        (function () {
+            var canvas = document.createElement("canvas");
+            if (canvas.getContext) {
+                window.s_canvas = true;
+                if (canvas.getContext("webgl")) {
+                    window.s_gl = true;
+                }
+                
+            }
+            
+        })()
+        
+    </script>
+    <link href="css/all.css" rel="stylesheet" />
+           
+    <title></title>
+</head>
+<body>
+  
+
+   <div id="content" ></div>
+
+    <script src="js/global.js"></script>
+    <script src="js/joyConfig.js"></script>
+    <script src="js/stageConfig.js"></script>
+    <script src="js/stageConfig1.js"></script>
+    <script src="js/stageConfig2.js"></script>
+    <script src="js/stageConfig3.js"></script>
+    <script src="js/stageConfig4.js"></script>
+    <script src="js/stageConfig5.js"></script>
+    <script src="js/stageConfig6.js"></script>
+    <script src="js/stageConfig7.js"></script>
+ 
+
+    <script data-main="js/main.js" src="js/lib/require.js"></script>
+    <script src="js/view/mainView.js"></script>
+    <script>
+      
+        
+      
+
+        function getB2ObjConfig() {
+            var arr = [];
+            window.Common.eachB2Body(function (b) {
+                var p = b.GetPosition();
+                var cfg = b.gameCfg;
+                cfg.x = p.x * window.GLOBAL.PTM_RATIO;
+                cfg.y = p.y * window.GLOBAL.PTM_RATIO-40 ;
+                cfg.rotation = b.GetAngle() * 180 / Math.PI;
+               // cfg.density = 0.4;
+        
+                arr.push(cfg);
+            });
+            arr = arr.reverse();
+            return JSON.stringify(arr);
+        }
+
+
+    </script> 
+
+    <script>
+        $("#debugView").click(function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            var hint = $("#hint").val();
+            var width = window.parseFloat($("#width").val());
+            var height = window.parseFloat($("#height").val());
+            window.EB=BoardCreate({
+                "hint": hint,
+                "extType": "body",
+                "density": 1,
+                "friction": 0.5,
+                "restitution": 0.05,
+                "width": width,
+                "height": height,
+                "x": x,
+                "y": y,
+                "rotation": 0,
+                "asset": "xxxxxxxxxxx",
+                "hp": 12,
+                "id": "id"
+
+            });
+
+        });
+        $("#undo").click(function (e) {
+            world.DestroyBody(window.EB);
+        });
+
+         
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/lib/jquery.cookie.js"></script>
+    <script src="js/dc.js"></script>
+    <link  href="css/all.css" rel="stylesheet" />
+    <style>
+           .innerContainer {
+            width:1210px;
+            height:450px;
+            position:absolute;
+            background:#000
+        }
+    </style>
+    <script>
+    dc.log(null, 1);
+
+    function loadingready() {
+        window.setTimeout(function() {
+            $(".inner").animate({
+                "margin-left": "-230px"
+            }, 1000, "linear", function() {
+                $(".g_joy img").animate({
+                    "margin-top": "0px",
+                    "opacity": 1
+                });
+            });
+        }, 3000);
+
+        window.setTimeout(function() {
+            $(".g_mooncake img").animate({
+                "margin-top": "0px",
+                "opacity": 1
+            });
+        }, 500);
+        window.setTimeout(function() {
+            $(".y_mooncake img").animate({
+                "margin-top": "0px",
+                "opacity": 1
+            });
+        }, 1200);
+
+
+
+    }
+    </script>
+</head>
+
+<body>
+    <div id="loadingBg" class="loadingBg">
+
+        <div class="inner">
+            <div class="bubble g_mooncake">
+                <img src="img/loading/dialogue1.png" />
+            </div>
+            <div class="bubble y_mooncake">
+                <img src="img/loading/dialogue2.png" />
+            </div>
+            <div class="bubble g_joy">
+                <img src="img/loading/dialogue3.png" />
+            </div>
+            <img id="startBtn" src="img/loading/startBtnLoading.gif" />
+            <img src="img/loading/adnimation.jpg" id="loadingImg" onload="loadingready()" />
+        </div>
+
+    </div>
+    <div class="innerContainer">
+        <iframe id="ifr_inner" width="100%" height="100%" src="indexInner.html" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+
+    </div>
+
+
+</body>
+
+</html>

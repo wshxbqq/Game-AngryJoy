@@ -1,0 +1,1 @@
+var JoyConfig=window.JoyConfig={hint:"joy",extType:"joy",shape:"ball",mooncake:!1,joy:!0,density:1,friction:.5,restitution:0,radius:32.5,x:window.GLOBAL.joyPosition.x,y:window.GLOBAL.joyPosition.y,rotation:0,asset:"joy.png"};
